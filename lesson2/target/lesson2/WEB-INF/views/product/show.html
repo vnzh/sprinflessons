@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf/org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <div>
+        <div>ID <p th:text="${product.getId()}">VALUE</p>
+         </div>
+
+        <div>Title
+            <p th:text="${product.getTitle()}">VALUE</p>
+        </div>
+        <div>Description <p th:text="${product.getDescription()}">VALUE</p>
+        </div>
+        <div>Brand <p th:text="${product.getBrand()}">VALUE</p>
+        </div>
+        <div>Price <p th:text="${product.getPrice()}">VALUE</p>
+        </div>
+
+    </div>
+</div>
+
+<a th:href="@{/product/change/{id}(id=${product.getId()})}">change</a>
+<!--private Long id;-->
+<!--private String title;-->
+<!--private  String description;-->
+<!--private  String brand;-->
+<!--private double price;-->
+
+
+<!--<p>ID</p>-->
+<!--<p th:text="${product.getTitle()}">VALUE</p>-->
+<!--<p th:text="${product.getId()}">VALUE</p>-->
+
+<!--<p>Title</p>-->
+
+
+</body>
+</html>
